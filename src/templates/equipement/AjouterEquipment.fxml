@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane"  prefHeight="617.0" prefWidth="1125.0" style="-fx-background-color: #FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.equipement.AjouterEquipmentController">
+   <children>
+      <JFXButton fx:id="btnAjouter" layoutX="479.0" layoutY="392.0" mnemonicParsing="false" onAction="#AddEquipment" prefHeight="30.0" prefWidth="146.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Ajouter">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn" />
+         </styleClass>
+      </JFXButton>
+      <VBox layoutX="552.0" layoutY="110.0" prefHeight="254.0" prefWidth="174.0" spacing="20.0">
+         <children>
+            <JFXComboBox fx:id="tfID_emp" prefHeight="25.0" prefWidth="208.0" />
+            <JFXTextField fx:id="tfType" promptText="Type" />
+            <JFXTextField fx:id="tfMarque" promptText="Marque" />
+            <JFXTextField fx:id="tfEtat" promptText="Etat" />
+            <HBox alignment="BOTTOM_CENTER" prefHeight="18.0" prefWidth="149.0" spacing="20.0">
+               <children>
+                  <JFXCheckBox fx:id="tfDisponnible1" mnemonicParsing="false" text="Oui" />
+                  <JFXCheckBox fx:id="tfDisponnible2" mnemonicParsing="false" text="Non" />
+               </children>
+            </HBox>
+            <JFXTextField fx:id="tfMatricule" promptText="Matricule" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" layoutX="361.0" layoutY="119.0" prefHeight="235.0" prefWidth="120.0">
+         <children>
+            <Label text="Employe :" />
+            <Label text="Type :">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Marque :">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Etat :">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Disponiblite :">
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Matricule :">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="427.0" layoutY="54.0" prefHeight="32.0" prefWidth="251.0" text="Formulaire equipement" textFill="#5e5a5a">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+   <styleClass>
+      <String fx:value="white-form" />
+      <String fx:value="border" />
+   </styleClass>
+</AnchorPane>

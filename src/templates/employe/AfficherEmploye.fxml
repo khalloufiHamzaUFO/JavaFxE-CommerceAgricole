@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1083.0" style="-fx-background-color: #FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.employe.AfficherEmployeController">
+   <children>
+      <TableView fx:id="table_vieww" layoutX="108.0" layoutY="247.0" prefHeight="331.0" prefWidth="868.0" stylesheets="@../css/fullpackstyling.css">
+                                 <columns>
+                            
+                                  <TableColumn fx:id="col_nom" prefWidth="132.0" text="nom" />
+                              <TableColumn fx:id="col_prenom" prefWidth="139.0" text="prenom" />
+                              <TableColumn fx:id="col_cin" prefWidth="151.0" text="cin" />
+                              <TableColumn fx:id="col_salaire" prefWidth="132.0" text="salaire" />
+                              <TableColumn fx:id="col_age" prefWidth="96.0" text="age" />
+            <TableColumn fx:id="col_tel" prefWidth="216.0" text="num tel" />
+                          </columns>
+                              </TableView>
+      <JFXButton fx:id="btnSupprimer" layoutX="869.0" layoutY="206.0" mnemonicParsing="false" onAction="#SupprimerEmploye" prefHeight="27.0" prefWidth="158.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="Supprimer" />
+      <JFXButton fx:id="btnModifier" layoutX="680.0" layoutY="206.0" mnemonicParsing="false" onAction="#ModifierEmploye" prefHeight="27.0" prefWidth="158.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Modifer" />
+      <TextField fx:id="tfemail" layoutX="620.0" layoutY="219.0" promptText="Email" style="-fx-background-radius: 1em;" visible="false" />
+      <TextField fx:id="tfpassword" layoutX="621.0" layoutY="266.0" promptText="Password" style="-fx-background-radius: 1em;" visible="false" />
+      <TextField fx:id="tffirstname" layoutX="622.0" layoutY="310.0" promptText="Firstname" style="-fx-background-radius: 1em;" visible="false" />
+      <TextField fx:id="tflastname" layoutX="622.0" layoutY="358.0" promptText="Lastname" style="-fx-background-radius: 1em;" visible="false" />
+      <TextField fx:id="tfNbrTel" layoutX="622.0" layoutY="402.0" promptText="Nbr tel" style="-fx-background-radius: 1em;" visible="false" />
+      
+      <JFXTextField fx:id="tfrecherche" layoutX="55.0" layoutY="206.0" onKeyReleased="#list" prefHeight="27.0" prefWidth="544.0" promptText="Recherche" />
+      <JFXComboBox fx:id="cbRecherche" layoutX="163.0" layoutY="166.0" onAction="#list" prefHeight="25.0" prefWidth="137.0" style="-fx-background-radius: 1em;" />
+      <JFXButton fx:id="btnExcel" layoutX="832.0" layoutY="167.0" mnemonicParsing="false" onAction="#generateExcel" prefHeight="27.0" prefWidth="83.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="Excel">
+         <graphic>
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="cbtri" layoutX="461.0" layoutY="166.0" onAction="#listtri" prefHeight="25.0" prefWidth="137.0" style="-fx-background-radius: 1em;" />
+      <JFXButton fx:id="btnAfficher" layoutX="711.0" layoutY="169.0" mnemonicParsing="false" onAction="#AfficherEmploye" prefHeight="27.0" prefWidth="83.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="Afficher">
+         <graphic>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="56.0" layoutY="170.0" text="Recherche selon :" />
+      <Label layoutX="387.0" layoutY="171.0" text="Trie selon : " />
+      <JFXButton fx:id="btnsms" layoutX="943.0" layoutY="166.0" mnemonicParsing="false" onAction="#envoyerSMS" prefHeight="27.0" prefWidth="83.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="SMS">
+         <graphic>
+         </graphic>
+      </JFXButton>
+      <Pane layoutX="1.0" prefHeight="107.0" prefWidth="1135.0" styleClass="head-background" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="440.0" layoutY="36.0" text="Gestion des Employés" textFill="#000000b5">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutX="999.0" layoutY="244.0" prefHeight="243.0" prefWidth="113.0" />
+   </children>
+</AnchorPane>

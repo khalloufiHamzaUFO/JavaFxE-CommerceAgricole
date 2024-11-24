@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CategorieFormController">
+    <children>
+        <VBox layoutX="450.0" layoutY="145.0" prefHeight="200.0" prefWidth="246.0">
+            <children>
+                <JFXTextField fx:id="tfLabel" promptText="Label">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </JFXTextField>
+                <JFXTextField fx:id="tfIcon" editable="false" prefHeight="0.0" prefWidth="181.0" promptText="Icon" />
+            </children>
+        </VBox>
+      <Label layoutX="338.0" layoutY="88.0" prefHeight="35.0" prefWidth="224.0" text="Formulaire categorie" textFill="#3c3f43">
+         <font>
+            <Font name="MS Outlook" size="24.0" />
+         </font>
+      </Label>
+          <JFXButton fx:id="btnSubmitModif" layoutX="338.0" layoutY="332.0" mnemonicParsing="false" onAction="#handlebtnModif" prefHeight="25.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Submit" textFill="#07081b">
+              <font>
+                  <Font name="System Bold" size="12.0" />
+              </font>
+          </JFXButton>
+      <VBox alignment="TOP_RIGHT" layoutX="238.0" layoutY="164.0" prefHeight="86.0" prefWidth="100.0">
+         <children>
+            <Label text="Label :">
+               <font>
+                  <Font name="Marlett" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Icon :">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Marlett" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <ImageView fx:id="imageView" fitHeight="126.0" fitWidth="134.0" layoutX="759.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" />
+          <JFXButton fx:id="btnIcon" layoutX="450.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#chooseFile" prefHeight="25.0" prefWidth="246.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Image" />
+    </children>
+</AnchorPane>

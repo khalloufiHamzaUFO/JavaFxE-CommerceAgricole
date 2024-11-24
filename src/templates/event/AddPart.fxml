@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1010.0" style="-fx-background-color:#FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.event.AddPartController">
+   <children>
+      <AnchorPane fx:id="modpan" layoutX="697.0" layoutY="96.0" prefHeight="523.0" prefWidth="261.0" styleClass="white-form">
+         <children>
+            <Label id="tx1" fx:id="t1" layoutX="18.0" layoutY="114.0" text="Formulaire participation">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label id="tx4" fx:id="t4" layoutX="54.0" layoutY="287.0" />
+            <JFXButton id="btn1" fx:id="bn1" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="58.0" layoutY="320.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="34.0" prefWidth="149.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="create-btn" text="Ajouter" />
+            <VBox layoutX="109.0" layoutY="156.0" prefHeight="156.0" prefWidth="155.0" spacing="20.0">
+               <children>
+                  <JFXTextField id="titre" fx:id="tt1" prefHeight="30.0" prefWidth="97.0" promptText="Id utilisateur" />
+                  <JFXTextField id="lieu" fx:id="tt2" prefHeight="30.0" prefWidth="97.0" promptText="Id evenement" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" layoutX="-20.0" layoutY="156.0" prefHeight="110.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Label id="tx2" fx:id="t2" prefHeight="20.0" prefWidth="86.0" text="Id Utilisateur :">
+                     <font>
+                        <Font name="Marlett" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label id="tx3" fx:id="t3" text="Id Evenement :">
+                     <font>
+                        <Font name="Marlett" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <TableView id="tab" fx:id="tableau" layoutX="83.0" layoutY="207.0" stylesheets="@../css/fullpackstyling.css" prefHeight="362.0" prefWidth="453.0" styleClass="table">
+         <columns>
+            <TableColumn id="tr3" fx:id="trx1" prefWidth="86.0" text="Id" />
+            <TableColumn id="tr1" fx:id="trx2" prefWidth="178.0" text="Id Utilisateur" />
+            <TableColumn id="tr2" fx:id="trx3" minWidth="0.0" prefWidth="187.0" text="Id Evenement" />
+         </columns>
+      </TableView>
+      <JFXButton id="btn2" fx:id="bn2" layoutX="238.0" layoutY="162.0" mnemonicParsing="false" onAction="#modifier" prefHeight="30.0" prefWidth="149.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="create-btn" text="Modifier" />
+      <JFXButton id="btn3" fx:id="bn3" layoutX="419.0" layoutY="162.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="30.0" prefWidth="149.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="create-btn" text="Supprimer" />
+      <JFXButton id="btn4" fx:id="bn4" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="57.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="30.0" prefWidth="149.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="create-btn" text="Refresh" />
+      <Pane prefHeight="111.0" prefWidth="1118.0" styleClass="head-background" stylesheets="@../css/style.css">
+         <children>
+            <Label id="tx5" fx:id="t5" layoutX="385.0" layoutY="40.0" text="Gestion des participations" textFill="#4a4a4a">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

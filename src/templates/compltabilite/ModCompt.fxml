@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="617.0" prefWidth="1125.0" style="-fx-background-color:#FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.compltabilite.ModComptContoller">
+    <children>
+        <VBox layoutX="604.0" layoutY="223.0" prefHeight="133.0" prefWidth="171.0">
+            <children>
+                <DatePicker fx:id="tfDate" promptText="Date" />
+                <JFXTextField fx:id="tfVal" promptText="Valeur">
+                    <VBox.margin>
+                        <Insets top="40.0" />
+                    </VBox.margin>
+                </JFXTextField>
+            </children>
+        </VBox>
+        <VBox alignment="TOP_RIGHT" layoutX="411.0" layoutY="226.0" prefHeight="149.0" prefWidth="146.0">
+            <children>
+                <Label text="Date :" />
+                <Label text="Valeur :">-
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin></Label>
+            </children>
+        </VBox>
+        <JFXButton fx:id="btnAdd" layoutX="566.0" layoutY="363.0" style="-fx-border-color: black; -fx-border-radius: 3;" mnemonicParsing="false" onAction="#handleEdit" prefHeight="25.0" prefWidth="77.0" text="Modifier" />
+        <Label layoutX="502.0" layoutY="149.0" text="Formulaire modification">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+    </children>
+</AnchorPane>

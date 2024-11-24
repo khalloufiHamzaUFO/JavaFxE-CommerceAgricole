@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane  prefHeight="617.0" prefWidth="1125.0" style="-fx-background-color: #FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FormController">
+   <children>
+      <VBox layoutX="461.0" layoutY="122.0" prefHeight="260.0" prefWidth="241.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="tfNom" promptText="Nom">
+               <font>
+                  <Font name="Marlett" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="tfPrix" promptText="Prix">
+               <font>
+                  <Font name="Marlett" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextArea fx:id="tfDescription" promptText="Description">
+               <font>
+                  <Font name="Marlett" size="12.0" />
+               </font></JFXTextArea>
+            <ChoiceBox fx:id="choiceBoxCategorie" prefHeight="25.0" prefWidth="246.0" />
+            <JFXCheckBox fx:id="CheckBox" mnemonicParsing="false" text="Status">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXCheckBox>
+            <JFXTextField fx:id="tfFile" alignment="CENTER" editable="false" prefHeight="53.0" prefWidth="241.0" promptText="Nom du ficher" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" layoutX="258.0" layoutY="129.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="32.0" text="Nom">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Prix">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="15.0" prefWidth="73.0" text="Description ">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Categorie">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="MS Reference Sans Serif" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Statut">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="MS Reference Sans Serif" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Image">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnSubmitt" layoutX="365.0" layoutY="430.0" mnemonicParsing="false" onMouseClicked="#handleButtonAjout" prefHeight="25.0" prefWidth="193.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="Submit" textFill="#000000e0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <Label layoutX="365.0" layoutY="64.0" text="Produit formulaire">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageView" fitHeight="117.0" fitWidth="150.0" layoutX="735.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="btnFileChooser" layoutX="461.0" layoutY="387.0" mnemonicParsing="false" onMouseClicked="#chooseFile" prefHeight="25.0" prefWidth="241.0" style="-fx-border-color: black; -fx-border-radius: 2;" text="Choisir un fichier">
+         <font>
+            <Font name="Marlett" size="13.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>

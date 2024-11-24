@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.compltabilite.CalculComtController">
+   <children>
+            <Button fx:id="btnSubmitt" layoutX="234.0" layoutY="297.0" mnemonicParsing="false" onMouseClicked="#handleSubmit" prefHeight="25.0" prefWidth="108.0" text="Submit" />
+      <ChoiceBox fx:id="cbCompt" layoutX="201.0" layoutY="200.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="211.0" layoutY="82.0" prefHeight="17.0" prefWidth="155.0" text="Calcul comptatbilite par jour" />
+      <Label fx:id="idComptt" layoutX="151.0" layoutY="150.0" prefHeight="17.0" prefWidth="290.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

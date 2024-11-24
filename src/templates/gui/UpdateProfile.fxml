@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.gui.UpdateProfileController">
+   <children>
+            <Button fx:id="bntsave" layoutX="568.0" layoutY="390.0" mnemonicParsing="false" onAction="#Modifier" prefWidth="150.0" styleClass="other-form" stylesheets="@/templates/gui/a.css" text="Enregistrer" />
+      <VBox layoutX="510.0" layoutY="149.0" prefHeight="200.0" prefWidth="265.0" spacing="20.0">
+         <children>
+                  <JFXTextField fx:id="nomTextField" prefHeight="35.0" prefWidth="223.0" promptText="Nom" />
+                  <JFXTextField fx:id="prenomTextField" prefHeight="35.0" prefWidth="223.0" promptText="Prenom" />
+                  <JFXTextField fx:id="emailTextField" prefHeight="35.0" prefWidth="223.0" promptText="Email" />
+                  <JFXTextField fx:id="telFieldText" prefHeight="35.0" prefWidth="223.0" promptText="Telephone" />
+         </children>
+      </VBox>
+      <Pane prefHeight="600.0" prefWidth="379.0" style="-fx-background-color: #F0EEED;">
+         <children>
+                  <Button fx:id="pwdc" layoutX="80.0" layoutY="344.0" mnemonicParsing="false" onAction="#ResetPassword" prefHeight="35.0" prefWidth="219.0" styleClass="white-form" stylesheets="@/templates/gui/a.css" text="Changer mot de passe" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

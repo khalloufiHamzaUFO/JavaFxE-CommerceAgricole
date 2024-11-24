@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="1125.0" style="-fx-background-color: #FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CategorieFormController">
+    <children>
+      <VBox layoutX="500.0" layoutY="166.0" prefHeight="200.0" prefWidth="260.0">
+         <children>
+            <JFXTextField fx:id="tfLabel" promptText="Label">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+          <JFXTextField fx:id="tfIcon" editable="false" prefHeight="0.0" prefWidth="181.0" promptText="Icon" />
+         </children>
+      </VBox>
+      <Label layoutX="388.0" layoutY="89.0" prefHeight="35.0" prefWidth="224.0" text="Formulaire categorie" textFill="#4e5357">
+         <font>
+            <Font name="Marlett" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageView" fitHeight="125.0" fitWidth="174.0" layoutX="797.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="btnSubmit" layoutX="373.0" layoutY="366.0" mnemonicParsing="false" onMouseClicked="#handleButtonSubmit" prefHeight="27.0" prefWidth="252.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="Submit">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+    <JFXButton fx:id="btnIcon" layoutX="499.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#chooseFile" prefHeight="25.0" prefWidth="260.0" style="-fx-border-color: black; -fx-border-radius: 2;" text="Image" />
+      <VBox alignment="TOP_RIGHT" layoutX="316.0" layoutY="174.0" prefHeight="79.0" prefWidth="109.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="39.0" text="Label :">
+               <font>
+                  <Font name="Marlett" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="35.0" text="Icon :">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Marlett" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

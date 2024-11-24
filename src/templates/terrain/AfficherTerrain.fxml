@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1010.0" style="-fx-background-color:#FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.terrain.AfficherTerrainController">
+   <children>
+      <TableView fx:id="table_vieww" layoutX="122.0" layoutY="242.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="303.0" prefWidth="841.0" stylesheets="@../css/fullpackstyling.css">
+                                <columns>
+                            <TableColumn fx:id="Col_culture_id" minWidth="8.0" prefWidth="162.0" text="culture" />
+                              <TableColumn fx:id="Col_numero" minWidth="8.0" prefWidth="214.0" text="numero" />
+                              <TableColumn fx:id="Col_surface" minWidth="8.0" prefWidth="202.0" text="surface" />
+                              <TableColumn fx:id="Col_lieu" minWidth="8.0" prefWidth="261.0" text="lieu" />
+                          </columns>
+                              </TableView>
+      <JFXButton fx:id="btnSupprimer" layoutX="844.0" layoutY="197.0" mnemonicParsing="false" onAction="#SupprimerTerrain" prefHeight="25.0" prefWidth="149.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Supprimer" />
+      <JFXButton fx:id="btnModifier" layoutX="669.0" layoutY="197.0" mnemonicParsing="false" onAction="#ModifierTerrain" prefHeight="25.0" prefWidth="149.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Modifer" />
+     
+      <JFXButton fx:id="updateBtn" layoutX="622.0" layoutY="449.0" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="25.0" prefWidth="149.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Mettre à jour" visible="false" />
+      <JFXTextField fx:id="tfrecherche" layoutX="70.0" layoutY="197.0" onKeyReleased="#list" prefHeight="27.0" prefWidth="542.0" promptText="Recherche" />
+      <JFXComboBox fx:id="cbRecherche" layoutX="178.0" layoutY="159.0" onAction="#list" prefHeight="25.0" prefWidth="137.0" style="-fx-background-radius: 1em;" />
+      <JFXComboBox fx:id="cbtri" layoutX="471.0" layoutY="159.0" onAction="#listtri" prefHeight="25.0" prefWidth="137.0" style="-fx-background-radius: 1em;" />
+      <Label layoutX="72.0" layoutY="163.0" text="Recherche selon :" />
+      <Label layoutX="402.0" layoutY="163.0" text="Trie selon : " />
+      <Pane prefHeight="111.0" prefWidth="1118.0" styleClass="head-background" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="440.0" layoutY="38.0" text="Gestion des Terrains" textFill="#454645b5">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutX="993.0" layoutY="266.0" prefHeight="144.0" prefWidth="100.0" spacing="20.0">
+         <children>
+            <JFXButton fx:id="btnAfficher" mnemonicParsing="false" onAction="#AfficherTerrain" prefHeight="27.0" prefWidth="101.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Afficher">
+
+      </JFXButton>
+            <JFXButton fx:id="btnimpression" mnemonicParsing="false" onAction="#Imprimer" prefHeight="27.0" prefWidth="111.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Impression">
+
+      </JFXButton>
+            <JFXButton fx:id="btnmap" mnemonicParsing="false" onAction="#Map" prefHeight="27.0" prefWidth="107.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Map" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

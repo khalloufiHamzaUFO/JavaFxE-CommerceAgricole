@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="471.0" prefWidth="712.0" style="-fx-background-color: WHITE;" styleClass="other-form" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.gui.ResetMdpController">
+   <children>
+      <JFXButton fx:id="retoubtn" layoutX="438.0" layoutY="392.0" mnemonicParsing="false" onAction="#retour" prefHeight="41.0" prefWidth="171.0" styleClass="color-form" stylesheets="@/templates/gui/a.css" text="Retour">
+         <font>
+            <Font name="Book Antiqua Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane prefHeight="471.0" prefWidth="216.0" style="-fx-background-color: #F0EEED;" styleClass="white-form">
+         <children>
+            <ImageView fitHeight="231.0" fitWidth="209.0" layoutX="4.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="396.0" layoutY="119.0" prefHeight="245.0" prefWidth="254.0" spacing="20.0">
+         <children>
+            <JFXPasswordField fx:id="pwda" prefHeight="34.0" prefWidth="254.0" promptText="Mot de passe actuelle" styleClass="white-form">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="pwdn" prefHeight="30.0" prefWidth="254.0" promptText="Nouveau mot de passe" styleClass="white-form">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="pwdr" prefHeight="30.0" prefWidth="254.0" promptText="Confirmer le mot de passe" styleClass="white-form">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="btnvalid" mnemonicParsing="false" onAction="#validerm" prefHeight="34.0" prefWidth="254.0" stylesheets="@/templates/gui/a.css" text="Valider">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

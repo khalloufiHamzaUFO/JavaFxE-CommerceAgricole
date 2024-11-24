@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="529.0" prefWidth="1150.0" style="-fx-background-color:#FEFFEC;" styleClass="other-form" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.gui.GestionUtilisateurController">
+   <children>
+      <TableView fx:id="tableviewUtilisateur" layoutX="38.0" layoutY="159.0" prefHeight="335.0" prefWidth="606.0" stylesheets="@../css/fullpackstyling.css">
+         <columns>
+            <TableColumn fx:id="nom1" prefWidth="65.0" text="Nom" />
+            <TableColumn fx:id="prenom1" prefWidth="74.0" text="Prénom" />
+            <TableColumn fx:id="cin1" prefWidth="85.0" text="Cin" />
+            <TableColumn fx:id="mail1" prefWidth="191.0" text="Email" />
+            <TableColumn fx:id="roles1" minWidth="0.0" prefWidth="86.0" text="Roles" />
+            <TableColumn fx:id="tel1" prefWidth="104.0" text="Tel" />
+         </columns>
+      </TableView>
+      <VBox layoutX="949.0" layoutY="232.0" prefHeight="190.0" prefWidth="121.0" spacing="20.0">
+         <children>
+            <JFXButton fx:id="ajouterbtn" mnemonicParsing="false" onAction="#ajouterUtilisateur" prefHeight="26.0" prefWidth="135.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="white-form" text="Ajouter">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="modifierbtn" mnemonicParsing="false" onAction="#modifierUtilisateur" prefHeight="24.0" prefWidth="133.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="white-form" text="Modifier">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="suppbtn" mnemonicParsing="false" onAction="#supprimerUtilisateur" prefHeight="24.0" prefWidth="132.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="white-form" text="Supprimer">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="actualiser" mnemonicParsing="false" onAction="#showRec" prefHeight="24.0" prefWidth="120.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="white-form" text="Refresh" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="670.0" layoutY="182.0" prefHeight="289.0" prefWidth="247.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="nom" prefHeight="28.0" prefWidth="250.0" promptText="Nom">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="prenom" prefHeight="25.0" prefWidth="250.0" promptText="Prenom">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="cin" prefHeight="25.0" prefWidth="250.0" promptText="Cin">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tel" prefHeight="25.0" prefWidth="250.0" promptText="Téléphone">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="mail" prefHeight="25.0" prefWidth="250.0" promptText="Email">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="password" prefHeight="25.0" prefWidth="250.0" promptText="Mot de passe">
+               <font>
+                  <Font name="Marlett" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="roless" prefHeight="25.0" prefWidth="250.0" promptText="Roles" styleClass="white-form" />
+         </children>
+      </VBox>
+      <Pane prefHeight="111.0" prefWidth="1150.0" styleClass="head-background" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="455.0" layoutY="40.0" text="Gestion des utilisateurs">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

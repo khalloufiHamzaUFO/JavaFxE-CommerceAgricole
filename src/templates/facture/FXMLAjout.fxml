@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="617.0" prefWidth="1125.0" style="-fx-background-color: #FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.facture.AddFacture">
+   <children>
+      <VBox layoutX="627.0" layoutY="182.0" prefHeight="200.0" prefWidth="186.0" spacing="20.0">
+         <children>
+            <JFXComboBox fx:id="cbComt" prefHeight="25.0" prefWidth="212.0" promptText="Comptabilite" />
+            <DatePicker fx:id="tdDate" prefHeight="25.0" prefWidth="199.0" promptText="Date" />
+            <JFXComboBox fx:id="cbType" prefHeight="25.0" prefWidth="195.0" promptText="Type" />
+            <JFXTextField fx:id="tfVal" promptText="Valeur" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" layoutX="488.0" layoutY="190.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label text="Comptabilite :" />
+            <Label layoutX="10.0" layoutY="10.0" text="Date :">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin></Label>
+            <Label layoutX="10.0" layoutY="27.0" text="Type :">
+               <VBox.margin>
+                  <Insets top="35.0" />
+               </VBox.margin></Label>
+            <Label layoutX="10.0" layoutY="44.0" text="Valeur :">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin></Label>
+         </children>
+      </VBox>
+      <JFXButton layoutX="561.0" layoutY="402.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="27.0" prefWidth="132.0" style="-fx-border-radius: 3; -fx-border-color: blue;" text="Ajouter" />
+      <Label layoutX="549.0" layoutY="109.0" text="Formulaire d'ajout">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane"  prefHeight="617.0" prefWidth="1125.0" style="-fx-background-color: #FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.employe.AjouterEmployeController">
+   <children>
+      <JFXButton fx:id="btnAjouter" layoutX="438.0" layoutY="437.0" mnemonicParsing="false" onAction="#AddEmploye" prefHeight="30.0" prefWidth="149.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="btn" text="Ajouter" />
+      <VBox layoutX="533.0" layoutY="100.0" prefHeight="200.0" prefWidth="206.0" spacing="30.0">
+         <children>
+            <JFXTextField fx:id="tfNom" promptText="Nom" />
+            <JFXTextField fx:id="tfPrenom" promptText="Prenom" />
+            <JFXTextField fx:id="tfCin" promptText="CIN" />
+            <JFXTextField fx:id="tfAge" promptText="Age" />
+            <JFXTextField fx:id="tfSalaire" promptText="Salaire" />
+            <JFXTextField fx:id="tfNumtelephone" promptText="Tel" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" layoutX="313.0" layoutY="111.0" prefHeight="200.0" prefWidth="126.0" spacing="40.0">
+         <children>
+            <Label text="Nom :">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+            <Label text="Prenom :">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="35.0" text="CIN : ">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="33.0" text="Age :">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="51.0" text="Salaire :">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="57.0" text="Num tel :">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="430.0" layoutY="46.0" prefHeight="30.0" prefWidth="206.0" text="Formulaire employee">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+   <styleClass>
+      <String fx:value="white-form" />
+      <String fx:value="border" />
+   </styleClass>
+</AnchorPane>

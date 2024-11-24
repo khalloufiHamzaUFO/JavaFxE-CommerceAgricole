@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1083.0" style="-fx-background-color: #FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.equipement.AfficherEquipmentController">
+   <children>
+      <Pane layoutX="1.0" prefHeight="107.0" prefWidth="1135.0" styleClass="head-background" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="402.0" layoutY="44.0" text="Gestion des Equipements" textFill="#1e1e1eb5">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnSupprimer" layoutX="827.0" layoutY="210.0" mnemonicParsing="false" onAction="#SupprimerEquipment" prefHeight="27.0" prefWidth="174.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Supprimer" />
+      <JFXButton fx:id="btnModifier" layoutX="620.0" layoutY="210.0" mnemonicParsing="false" onAction="#ModifierEquipment" prefHeight="27.0" prefWidth="190.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Modifer" />
+      <TextField fx:id="tfemail" layoutX="620.0" layoutY="219.0" promptText="Email" style="-fx-background-radius: 1em;" visible="false" />
+      <TextField fx:id="tfpassword" layoutX="621.0" layoutY="266.0" promptText="Password" style="-fx-background-radius: 1em;" visible="false" />
+      <TextField fx:id="tffirstname" layoutX="622.0" layoutY="310.0" promptText="Firstname" style="-fx-background-radius: 1em;" visible="false" />
+      <TextField fx:id="tflastname" layoutX="622.0" layoutY="358.0" promptText="Lastname" style="-fx-background-radius: 1em;" visible="false" />
+      <TextField fx:id="tfNbrTel" layoutX="622.0" layoutY="402.0" promptText="Nbr tel" style="-fx-background-radius: 1em;" visible="false" />
+
+      <JFXTextField fx:id="tfrecherche" layoutX="82.0" layoutY="210.0" onKeyReleased="#list" prefHeight="27.0" prefWidth="489.0" promptText="Recherche" />
+      <JFXComboBox fx:id="cbRecherche" layoutX="194.0" layoutY="173.0" onAction="#list" prefHeight="25.0" prefWidth="137.0" style="-fx-background-radius: 1em;" />
+      <JFXComboBox fx:id="cbtri" layoutX="434.0" layoutY="172.0" onAction="#listtri" prefHeight="25.0" prefWidth="137.0" style="-fx-background-radius: 1em;" />
+      <Label layoutX="82.0" layoutY="177.0" text="Recherche selon :" />
+      <Label layoutX="359.0" layoutY="176.0" text="Trie selon : " />
+      <TableView fx:id="table_vieww" layoutX="82.0" layoutY="252.0" prefHeight="303.0" prefWidth="919.0" stylesheets="@../css/fullpackstyling.css">
+                                <columns>
+                      <TableColumn fx:id="col_employe_id" prefWidth="109.0" text="employe" />
+                        <TableColumn fx:id="col_Type" prefWidth="129.0" text="Type" />
+                        <TableColumn fx:id="col_Marque" prefWidth="154.0" text="Marque" />
+                        <TableColumn fx:id="col_etat" prefWidth="148.0" text="etat" />
+                        <TableColumn fx:id="col_disponnible" prefWidth="177.0" text="disponnible" />
+                        <TableColumn fx:id="col_matricule" prefWidth="230.0" text="matricule" />
+                    </columns>
+                              </TableView>
+      <VBox layoutX="1012.0" layoutY="252.0" prefHeight="200.0" prefWidth="110.0" spacing="20.0">
+         <children>
+            <JFXButton fx:id="btnAfficher" mnemonicParsing="false" onAction="#AfficherEquipment" prefHeight="27.0" prefWidth="113.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Reload">
+
+      </JFXButton>
+            <JFXButton fx:id="btngenerateExcel" mnemonicParsing="false" onAction="#generateExcel" prefHeight="27.0" prefWidth="125.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Generer XL">
+
+      </JFXButton>
+            <JFXButton fx:id="btnstat" mnemonicParsing="false" onAction="#stat" prefHeight="27.0" prefWidth="127.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Stat" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

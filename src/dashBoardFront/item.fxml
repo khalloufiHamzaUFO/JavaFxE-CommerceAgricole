@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane onMousePressed="#click" style="-fx-background-color: FEFFEC;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashBoardFront.ItemController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="63.0" layoutY="8.0" prefHeight="215.0" prefWidth="225.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="51.0" prefWidth="185.0">
+               <children>
+                  <Label fx:id="nameLabel" prefHeight="49.0" prefWidth="137.0" text="Butter">
+                     <font>
+                        <Font name="Bodoni MT" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceLable" prefHeight="49.0" prefWidth="101.0" text="1500">
+                     <font>
+                        <Font name="Bodoni MT" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <ImageView fx:id="img" fitHeight="115.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/butter.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="fruit-item" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

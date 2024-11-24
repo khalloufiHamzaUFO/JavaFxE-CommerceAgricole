@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  prefHeight="617.0" prefWidth="1125.0" style="-fx-background-color: #FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.terrain.ModifierTerrainController">
+   <children>
+      <JFXButton fx:id="btnimage" layoutX="296.0" layoutY="318.0" mnemonicParsing="false" onAction="#selectImage" prefHeight="27.0" prefWidth="111.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Import" />
+      <AnchorPane layoutX="236.0" layoutY="156.0" prefHeight="133.0" prefWidth="220.0" style="-fx-border-color: BLACK;">
+         <children>
+            <ImageView fx:id="ivImage" fitHeight="130.0" fitWidth="234.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+      <VBox alignment="TOP_RIGHT" layoutX="505.0" layoutY="135.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="50.0" text="Numero :" />
+            <Label prefHeight="17.0" prefWidth="69.0" text="Surface (M) :">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="30.0" text="Lieu :">
+               <VBox.margin>
+                  <Insets top="35.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="47.0" text="Culture :">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="647.0" layoutY="135.0" prefHeight="200.0" prefWidth="171.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="tfNumero" alignment="TOP_LEFT" promptText="entrer le numero" text="Numero" />
+            <JFXTextField fx:id="tfSurface" alignment="TOP_LEFT" prefHeight="26.0" prefWidth="165.0" promptText="entrer la surface en metre" text="Surface " />
+            <JFXTextField fx:id="tfLieu" promptText="entrer le lieu" text="Lieu" />
+            <JFXComboBox fx:id="cbCulture" prefWidth="150.0" promptText="choisir la culture" />
+         </children>
+      </VBox>
+      <Label layoutX="545.0" layoutY="74.0" prefHeight="32.0" prefWidth="205.0" text="Modifier terrain" textFill="#514e4e">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnModifier" layoutX="572.0" layoutY="344.0" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#ModifierTerrain" prefHeight="10.0" prefWidth="150.0" style="-fx-border-color: black; -fx-border-radius: 3;" text="Modifier" />
+   </children>
+</AnchorPane>

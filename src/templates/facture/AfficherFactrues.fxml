@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1010.0" style="-fx-background-color:#FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.facture.AfficherFactures">
+   <children>
+      <Pane prefHeight="111.0" prefWidth="1118.0" styleClass="head-background" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="454.0" layoutY="40.0" text="Gestion des factures">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnDel" layoutX="738.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="107.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="Supprimer" />
+      <JFXButton fx:id="btnMod" layoutX="738.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleEdit" prefHeight="25.0" prefWidth="107.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="Modifier" />
+      <JFXTextField fx:id="tfSearch" layoutX="114.0" layoutY="231.0" onKeyReleased="#handleSearch" prefHeight="25.0" prefWidth="255.0" promptText="Recherche" />
+      <TableView fx:id="tvFact" layoutX="114.0" layoutY="268.0" prefHeight="273.0" prefWidth="538.0" stylesheets="@../css/fullpackstyling.css">
+        <columns>
+          <TableColumn fx:id="colComtablite" prefWidth="120.0" text="Comptabilite" />
+          <TableColumn fx:id="colDate" prefWidth="86.0" text="Date facture" />
+            <TableColumn fx:id="colType" prefWidth="177.0" text="Type" />
+            <TableColumn fx:id="ColValeur" prefWidth="154.0" text="Valeur" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="597.0" layoutY="230.0" mnemonicParsing="false" onAction="#relaod" style="-fx-border-radius: 3; -fx-border-color: blue;" text="Reload" />
+      <JFXButton layoutX="974.0" layoutY="137.0" mnemonicParsing="false" onAction="#Imprimer" prefHeight="25.0" prefWidth="101.0" style="-fx-border-radius: 3; -fx-border-color: blue;" text="Imprimer" />
+   </children>
+</AnchorPane>

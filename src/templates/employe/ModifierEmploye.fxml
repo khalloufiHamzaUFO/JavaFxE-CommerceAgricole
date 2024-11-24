@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane"  prefHeight="617.0" prefWidth="1125.0" style="-fx-background-color: #FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.employe.ModifierEmployeController">
+   <children>
+      <JFXButton fx:id="btnModifier" layoutX="438.0" layoutY="410.0" mnemonicParsing="false" onAction="#ModiferEmploye" prefHeight="30.0" prefWidth="157.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="btn" text="Modifier" />
+      <VBox layoutX="516.0" layoutY="125.0" prefHeight="237.0" prefWidth="195.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="tfNom" promptText="Nom" />
+            <JFXTextField fx:id="tfPrenom" promptText="Prenom" />
+            <JFXTextField fx:id="tfCin" promptText="Cin" />
+            <JFXTextField fx:id="tfAge" promptText="Age" />
+            <JFXTextField fx:id="tfSalaire" promptText="Salaire" />
+            <JFXTextField fx:id="tfNumtelephone" promptText="Tel" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" layoutX="358.0" layoutY="131.0" prefHeight="250.0" prefWidth="108.0" spacing="35.0">
+         <children>
+            <Label prefHeight="13.0" prefWidth="36.0" text="Nom :">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="58.0" text="Prenom :">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="19.0" prefWidth="36.0" text="CIN :">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="36.0" text="Age :">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="52.0" text="Salaire :">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="13.0" prefWidth="57.0" text="Num tel :">
+               <font>
+                  <Font name="Marlett" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="412.0" layoutY="72.0" prefHeight="30.0" prefWidth="201.0" text="Formulaire employe">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+   <styleClass>
+      <String fx:value="white-form" />
+      <String fx:value="border" />
+   </styleClass>
+</AnchorPane>

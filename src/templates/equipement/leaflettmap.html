@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recherche d'adresse avec Leaflet</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100vh;
+        width: 60%;
+        position: fixed;
+        right: 0;
+      }
+      #search-input {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+    </style>
+ 
+
+
+
+  </head>
+  <body>
+    <div id="map"></div>
+    <input type="text" id="search-input" placeholder="Rechercher un lieu">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/esri-leaflet@2.1.1/dist/esri-leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.3/dist/esri-leaflet-geocoder.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.min.js"></script>
+
+    <script>
+      var mymap = L.map("map").setView([33.886917, 9.537499], 5);
+      var markers = L.markerClusterGroup();
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "Map data &copy; OpenStreetMap contributors",
+        maxZoom: 18,
+      }).addTo(mymap);
+
+      L.Control.geocoder({
+        collapsed: false,
+        placeholder: "Rechercher une adresse",
+        defaultMarkGeocode: false
+      }).on("markgeocode", function (event) {
+        var marker = L.marker(event.geocode.center).addTo(mymap);
+      }).addTo(mymap);
+function onLocationFound(e) {
+    var radius = e.accuracy / 2;
+    L.marker(e.latlng).addTo(mymap)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+    L.circle(e.latlng, radius).addTo(mymap);
+}
+
+function onLocationError(e) {
+    alert(e.message);
+}
+
+mymap.on('locationfound', onLocationFound);
+mymap.on('locationerror', onLocationError);
+
+mymap.locate({setView: true, maxZoom: 16});
+      var searchControl = L.esri.Geocoding.geocodeService();
+
+      var results = L.layerGroup().addTo(mymap);
+      var terrains = [
+        { lieu: "Tunis" },
+        { lieu: "Ariana" },
+        { lieu: "Ben Arous" },
+        { lieu: "Manouba" },
+        { lieu: "Nabeul"},];
+       for (var i = 0; i < terrains.length; i++) {
+  (function (lieu) { // encapsuler l'appel à la fonction geocode dans une fonction anonyme immédiatement invoquée
+    searchControl.geocode({ text: lieu }, function (result) {
+      var latlng = L.latLng(result.results[0].latlng);
+      var marker = L.marker(latlng).addTo(mymap);
+        console.log("Position de " + lieu + " : " + latlng); 
+      marker.bindPopup(lieu).openPopup(); // utilise la variable locale "lieu"
+      markers.addLayer(marker);
+    });
+  })(terrains[i].lieu); // passer le nom du lieu en tant que paramètre
+}
+
+     mymap.addLayer(markers);
+
+// Fonction pour obtenir des coordonnées aléatoires approximatives pour un lieu donné
+function getRandomCoords(lieu) {
+  var center = mymap.getCenter();
+  var radius = center.distanceTo(center.clone().wrap().add([0, 1])) * Math.random() * 0.2;
+  var angle = Math.random() * Math.PI * 2;
+  var latlng = mymap.containerPointToLatLng([mymap.getSize().x / 2 + radius * Math.cos(angle), mymap.getSize().y / 2 + radius * Math.sin(angle)]);
+  return latlng;
+}
+
+      searchControl.on("results", function(data) {
+        results.clearLayers();
+        for (var i = data.results.length - 1; i >= 0; i--) {
+          results.addLayer(L.marker(data.results[i].latlng));
+        }
+      });
+var lat1 ; // Remplacez cette valeur par la latitude de votre point de départ
+var lon1; // Remplacez cette valeur par la longitude de votre point de départ
+var lat2 ; // Remplacez cette valeur par la latitude de votre point d'arrivée
+var lon2 ; // Rempl
+      var control = L.Routing.control({
+  waypoints: [
+       
+    L.latLng(lat1, lon1), // Remplacez lat1 et lon1 par la latitude et la longitude de votre point de départ
+    L.latLng(lat2, lon2)  // Remplacez lat2 et lon2 par la latitude et la longitude de votre point d'arrivée
+  ],
+  routeWhileDragging: true,
+  geocoder: L.Control.Geocoder.nominatim(),
+  router: L.Routing.osrmv1({
+    language: 'fr' // Remplacez "fr" par la langue de votre choix
+    
+  })
+}).addTo(mymap);
+control.on('routesfound', function(e) {
+  var routes = e.routes;
+  var summary = routes[0].summary;
+  console.log('Distance: ' + summary.totalDistance + ' m');
+  console.log('Duration: ' + summary.totalTime + ' s');
+});
+
+    </script>
+  </body>
+</html>

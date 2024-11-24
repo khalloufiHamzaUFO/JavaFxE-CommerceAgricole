@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1010.0" style="-fx-background-color:#FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.compltabilite.AfficherComptController">
+   <children>
+      <TableView fx:id="tvCompt" layoutX="76.0" layoutY="226.0" prefHeight="362.0" prefWidth="424.0" stylesheets="@../css/fullpackstyling.css">
+        <columns>
+          <TableColumn fx:id="colDate" prefWidth="213.0" text="Date du comptabilite" />
+          <TableColumn fx:id="ColVal" prefWidth="211.0" text="Valeur" />
+        </columns>
+      </TableView>
+      <VBox layoutX="733.0" layoutY="313.0" prefHeight="136.0" prefWidth="138.0">
+         <children>
+            <JFXButton fx:id="btnMod" mnemonicParsing="false" onAction="#handleEdit" prefHeight="25.0" prefWidth="156.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="Modifier" />
+            <JFXButton fx:id="btnDel" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="147.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="Supprimer">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Pane prefHeight="111.0" prefWidth="1118.0" styleClass="head-background" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="421.0" layoutY="47.0" prefHeight="32.0" prefWidth="276.0" text="Gestion des comptabilites">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="searchField" layoutX="76.0" layoutY="187.0" onKeyReleased="#handleSearch" prefHeight="25.0" prefWidth="238.0" promptText="Recherche " />
+      <JFXButton layoutX="936.0" layoutY="141.0" mnemonicParsing="false" onAction="#Calcul" prefHeight="25.0" prefWidth="138.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="Calculer comptabilite" />
+   </children>
+</AnchorPane>

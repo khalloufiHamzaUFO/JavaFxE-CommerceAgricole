@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.gui.LoginController">
+   <children>
+      <BorderPane fx:id="loginform" prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <AnchorPane prefHeight="593.0" prefWidth="353.0" styleClass="white-form" stylesheets="@Design.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="363.0" fitWidth="281.0" layoutX="31.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="signupbtn" layoutX="29.0" layoutY="485.0" mnemonicParsing="false" onAction="#inscription" prefHeight="42.0" prefWidth="298.0" styleClass="create-btn" stylesheets="@Design.css" text="S'inscrire">
+                     <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="51.0" layoutY="468.0" text="Si vous n'avez un compte, merci de s'inscrire !" textFill="#51d068" />
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="511.0" prefWidth="369.0" styleClass="other-form" stylesheets="@Design.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="55.0" layoutY="112.0" text="FORMULAIRE DE CONNEXION " textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailc" layoutX="82.0" layoutY="234.0" prefHeight="35.0" prefWidth="223.0" promptText="Email">
+                     <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="logincbtn" layoutX="53.0" layoutY="365.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="260.0" styleClass="white-form" stylesheets="@Design.css" text="Connexion" textFill="#45a159">
+                     <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                     </font>
+                  </Button>
+                  <PasswordField fx:id="pwdc" layoutX="82.0" layoutY="300.0" prefHeight="35.0" prefWidth="223.0" promptText="Mot de passe" styleClass="white-form" />
+                  <Button fx:id="pwdbtn" layoutX="98.0" layoutY="410.0" mnemonicParsing="false" onAction="#goToEmailVerifie" prefHeight="30.0" prefWidth="180.0" styleClass="other-form" text="Mot de passe oublié" textFill="#3f9e63" />
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

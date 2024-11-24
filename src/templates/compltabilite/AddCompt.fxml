@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="617.0" prefWidth="1125.0" style="-fx-background-color: #FEFFEC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.compltabilite.AddComptController">
+   <children>
+      <VBox layoutX="618.0" layoutY="244.0" prefHeight="133.0" prefWidth="171.0">
+         <children>
+            <DatePicker fx:id="tfDate" promptText="Date" />
+            <JFXTextField fx:id="tfVal" promptText="Valeur">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </JFXTextField>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" layoutX="418.0" layoutY="244.0" prefHeight="149.0" prefWidth="146.0">
+         <children>
+            <Label text="Date :">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
+            <Label text="Valeur :">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin></Label>
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnAdd" layoutX="564.0" layoutY="442.0" mnemonicParsing="false" onAction="#addComptabilite" prefHeight="27.0" prefWidth="108.0" style="-fx-border-radius: 3; -fx-border-color: black;" text="Ajouter" />
+      <Label layoutX="538.0" layoutY="174.0" prefHeight="28.0" prefWidth="160.0" text="Formulaire ajout">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

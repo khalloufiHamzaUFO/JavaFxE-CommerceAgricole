@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="448.0" prefWidth="665.0" styleClass="other-form" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.event.ModifController">
+    <children>
+        <AnchorPane prefHeight="458.0" prefWidth="246.0" styleClass="white-form">
+            <children>
+                <Button id="btn9" fx:id="btn9" layoutX="45.0" layoutY="345.0" mnemonicParsing="false" onAction="#valider" prefHeight="30.0" prefWidth="156.0" styleClass="create-btn" text="Valider" />
+                <ImageView id="im1" fx:id="im1" fitHeight="73.0" fitWidth="72.0" layoutX="81.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/logos.png" />
+                    </image>
+                </ImageView>
+                <ImageView id="im2" fx:id="im2" fitHeight="24.0" fitWidth="156.0" layoutX="49.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/logos.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="imv" fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="363.0" layoutY="79.0" prefHeight="32.0" prefWidth="200.0" text="Merci de modifier vos champs!" textAlignment="CENTER">
+            <font>
+                <Font name="Bodoni MT Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField id="titre" fx:id="titre" layoutX="452.0" layoutY="163.0" prefHeight="28.0" prefWidth="90.0" promptText="Titre" />
+        <TextField id="lieu" fx:id="lieu" layoutX="452.0" layoutY="214.0" prefHeight="28.0" prefWidth="90.0" promptText="Lieu" />
+        <TextField id="image" fx:id="image" layoutX="332.0" layoutY="318.0" prefHeight="30.0" prefWidth="223.0" promptText="Image" />
+        <Label id="tx2" fx:id="tx2" layoutX="343.0" layoutY="168.0" text="Titre" />
+        <Label id="tx3" fx:id="tx3" layoutX="343.0" layoutY="219.0" text="Lieu" />
+        <Label id="tx4" fx:id="tx4" layoutX="338.0" layoutY="272.0" text="Image" />
+        <Button id="btn8" fx:id="btn81" layoutX="449.0" layoutY="266.0" mnemonicParsing="false" onAction="#chooseImage" prefHeight="32.0" prefWidth="97.0" styleClass="create-btn" text="Télécharger" />
+    </children>
+</AnchorPane>

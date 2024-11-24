@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="752.0" prefWidth="1236.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.equipement.TestMapController">
+   <children>
+      <WebView fx:id="webview" prefHeight="722.0" prefWidth="1236.0" />
+      <JFXButton layoutX="41.0" layoutY="189.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="88.0" style="-fx-border-color: #f10000; -fx-border-radius: 3;" text="Retour" />
+   </children>
+</AnchorPane>

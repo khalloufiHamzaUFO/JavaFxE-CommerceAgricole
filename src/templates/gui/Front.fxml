@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.gui.FrontController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <AnchorPane prefHeight="70.0" prefWidth="600.0" styleClass="other-form" stylesheets="@Design.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="logoutbtn" layoutX="456.0" layoutY="18.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="130.0" styleClass="white-form" text="Deconnexion" textFill="#bf1d1d" />
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#GoToHome" prefHeight="30.0" prefWidth="130.0" styleClass="white-form" text="Accueil" textFill="#1d2994" />
+                  <Button layoutX="170.0" layoutY="14.0" mnemonicParsing="false" onAction="#GotToProfile" prefHeight="30.0" prefWidth="130.0" styleClass="white-form" text="Profil" textFill="#31b54d" />
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="295.0" prefWidth="600.0" styleClass="white-form" stylesheets="@Design.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#2ccd79" layoutX="20.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu à  notre Application">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="121.0" fitWidth="118.0" layoutX="319.0" layoutY="-31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Logo.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#63ba47" layoutX="52.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous êtes connecter en tant que Utilisateur" wrappingWidth="286.046875">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

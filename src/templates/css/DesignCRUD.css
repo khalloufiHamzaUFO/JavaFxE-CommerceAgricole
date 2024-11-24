@@ -1,0 +1,57 @@
+
+
+.white-form{
+    -fx-background-color:#fff;
+    -fx-background-radius:8px;
+    -fx-border-color:linear-gradient(to bottom right,#2f466b,#662d60);
+    -fx-border-radius:10px;
+    -fx-text-inner-color:#000;
+}
+.border{
+    
+ -fx-border-color: linear-gradient(to bottom right, #b2d8b2, #1d8f1d);
+    -fx-border-width: 1px;
+    -fx-border-radius:6px;
+    
+}
+.btn{
+     -fx-background-color:linear-gradient(to bottom right, #98fb98, #006400);
+     
+     -fx-text-fill:#fff;
+     -fx-font-size: 14px;
+      -fx-cursor:hand;
+}
+.btn:hover{
+     -fx-background-color:linear-gradient(to bottom left, #8fbb8f, #1e991e);
+    
+}
+.table-view{
+    -fx-padding: 0px;
+    -fx-background-color:transparent;
+     -fx-border-color:linear-gradient(to bottom left,#b2d8b2, #1d8f1d);
+      -fx-border-radius:8px;
+     -fx-border-width:2px;
+}
+.table-view.column-header{
+    -fx-alignment: CENTER;
+    /*-fx-background-color:linear-gradient(to bottom left, #b2d8b2, #1d8f1d);*/
+      -fx-border-radius:8px 8px 0 0;
+     -fx-border-inset:0 0 0 0;
+    
+}
+.table-view.column-header-background{
+     -fx-background-color:linear-gradient(to bottom left, #b2d8b2, #1d8f1d);
+      -fx-border-radius:8px 8px 0 0;
+     -fx-border-inset:0 0 0 0;
+}
+.table-view.column-header, .filter{
+     -fx-background-color:transparent;
+      -fx-size:50px;
+}
+.table-view.column-header .label{
+     -fx-background-color:transparent;
+      -fx-text-fill:#fff;
+     -fx-font-family: arial;
+}
+
+

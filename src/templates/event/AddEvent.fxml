@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1010.0" style="-fx-background-color:#FEFFEC;" styleClass="other-form" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templates.event.AddEventController">
+    <children>
+        <AnchorPane fx:id="modpan" layoutX="701.0" layoutY="72.0" prefHeight="514.0" prefWidth="310.0" styleClass="white-form">
+            <children>
+                <Label id="tx1" fx:id="tx1" layoutX="125.0" layoutY="110.0" text="Formulaire Evenement" textFill="#7c7c7c">
+                    <font>
+                        <Font name="Marlett" size="15.0" />
+                    </font>
+                </Label>
+                <JFXButton id="btn1" fx:id="btn1" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="179.0" layoutY="475.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="16.0" prefWidth="137.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="create-btn" text="Ajouter" />
+            <VBox layoutX="181.0" layoutY="157.0" prefHeight="255.0" prefWidth="148.0" spacing="20.0">
+               <children>
+                      <JFXTextField id="titre" fx:id="titre" prefHeight="28.0" prefWidth="131.0" promptText="Titre" />
+                      <JFXTextField id="lieu" fx:id="lieu" prefHeight="28.0" prefWidth="131.0" promptText="Lieu" />
+                      <JFXTextField id="image" fx:id="image" editable="false" prefHeight="28.0" prefWidth="245.0" promptText="Image" />
+                   <DatePicker fx:id="dt" layoutX="133.0" layoutY="174.0" prefHeight="16.0" prefWidth="148.0" promptText="Date" />
+                   <JFXTextField id="lieu" fx:id="up" layoutX="134.0" layoutY="415.0" prefHeight="12.0" prefWidth="148.0" promptText="Updated_at" />
+                      <ImageView fx:id="imv" fitHeight="85.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" layoutX="54.0" layoutY="157.0" prefHeight="215.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                      <Label id="tx2" fx:id="tx2" text="Titre :">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                      <Label id="tx3" fx:id="tx3" text="Lieu :">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                      <Label id="tx4" fx:id="tx4" text="Image :">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Date :">
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="82.0" layoutY="151.0" text="updated_at :">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+                <JFXButton id="btn55" fx:id="btn55" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="64.0" layoutY="406.0" mnemonicParsing="false" onAction="#chooseImage" prefHeight="17.0" prefWidth="90.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="table" text="Télécharger" />
+            </children>
+        </AnchorPane>
+        <TableView id="tab" fx:id="tab" layoutX="47.0" layoutY="253.0" prefHeight="316.0" prefWidth="670.0" styleClass="table" stylesheets="@../css/fullpackstyling.css">
+            <columns>
+                <TableColumn id="tr3" fx:id="tr1" prefWidth="41.0" text="Id" />
+                <TableColumn id="tr1" fx:id="tr2" prefWidth="102.0" text="Titre" />
+                <TableColumn id="tr2" fx:id="tr3" prefWidth="115.0" text="Date" />
+                <TableColumn id="tr3" fx:id="tr4" prefWidth="111.0" text="Lieu" />
+                <TableColumn id="tr3" fx:id="tr5" prefWidth="150.0" text="Image" />
+                <TableColumn id="tr3" fx:id="tr6" prefWidth="150.0" text="Updated_at" />
+            </columns>
+        </TableView>
+        <JFXButton id="btn2" fx:id="btn2" layoutX="343.0" layoutY="214.0" mnemonicParsing="false" onAction="#modifier" prefHeight="17.0" prefWidth="162.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="create-btn" text="Modifier" />
+        <JFXButton id="btn4" fx:id="btn4" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="47.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="25.0" prefWidth="112.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="create-btn" text="Refresh" />
+        <JFXButton fx:id="bbnn" layoutX="343.0" layoutY="174.0" mnemonicParsing="false" onAction="#handleGenerateQRCode" prefHeight="27.0" prefWidth="162.0" style="-fx-border-color: blue; -fx-border-radius: 3;" styleClass="create-btn" text="Générer codeQR" />
+        <JFXButton id="btn3" fx:id="btn3" layoutX="533.0" layoutY="213.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="26.0" prefWidth="137.0" style="-fx-border-color: black; -fx-border-radius: 3;" styleClass="create-btn" text="Supprimer" />
+        <JFXButton fx:id="bbn" layoutX="533.0" layoutY="174.0" mnemonicParsing="false" onAction="#genererPDF" prefHeight="27.0" prefWidth="137.0" style="-fx-border-color: blue; -fx-border-radius: 3;" styleClass="create-btn" text="Générer PDF" />
+      <Pane prefHeight="111.0" prefWidth="1118.0" styleClass="head-background" stylesheets="@../css/style.css">
+         <children>
+              <Label id="tx5" fx:id="tx5" layoutX="377.0" layoutY="40.0" text="Gestion des evenements" textFill="#545454">
+                  <font>
+                      <Font name="System Bold" size="23.0" />
+                  </font>
+              </Label>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
